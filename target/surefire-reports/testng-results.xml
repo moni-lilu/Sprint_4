@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-28T19:39:22 EEST" name="Surefire suite" finished-at="2022-07-28T19:39:22 EEST" duration-ms="68">
+    <groups>
+    </groups>
+    <test started-at="2022-07-28T19:39:22 EEST" name="Surefire test" finished-at="2022-07-28T19:39:22 EEST" duration-ms="68">
+      <class name="PraktikumTest">
+        <test-method signature="shouldReturnFalseForEmptyString()[pri:0, instance:PraktikumTest@66ad7bf0]" started-at="2022-07-28T19:39:22 EEST" name="shouldReturnFalseForEmptyString" finished-at="2022-07-28T19:39:22 EEST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnFalseForEmptyString -->
+        <test-method signature="shouldReturnFalseForTwentyCharsInString()[pri:0, instance:PraktikumTest@66ad7bf0]" started-at="2022-07-28T19:39:22 EEST" name="shouldReturnFalseForTwentyCharsInString" finished-at="2022-07-28T19:39:22 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnFalseForTwentyCharsInString -->
+        <test-method signature="shouldReturnFalseForTwoCharsString()[pri:0, instance:PraktikumTest@66ad7bf0]" started-at="2022-07-28T19:39:22 EEST" name="shouldReturnFalseForTwoCharsString" finished-at="2022-07-28T19:39:22 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnFalseForTwoCharsString -->
+        <test-method signature="shouldReturnFalseStringWithSpaceAtTheBeginning()[pri:0, instance:PraktikumTest@66ad7bf0]" started-at="2022-07-28T19:39:22 EEST" name="shouldReturnFalseStringWithSpaceAtTheBeginning" finished-at="2022-07-28T19:39:22 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnFalseStringWithSpaceAtTheBeginning -->
+        <test-method signature="shouldReturnFalseStringWithSpaceAtTheEnd()[pri:0, instance:PraktikumTest@66ad7bf0]" started-at="2022-07-28T19:39:22 EEST" name="shouldReturnFalseStringWithSpaceAtTheEnd" finished-at="2022-07-28T19:39:22 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnFalseStringWithSpaceAtTheEnd -->
+        <test-method signature="shouldReturnFalseStringWithTwoSpaceInTheMiddle()[pri:0, instance:PraktikumTest@66ad7bf0]" started-at="2022-07-28T19:39:22 EEST" name="shouldReturnFalseStringWithTwoSpaceInTheMiddle" finished-at="2022-07-28T19:39:22 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnFalseStringWithTwoSpaceInTheMiddle -->
+        <test-method signature="shouldReturnFalseStringWithoutSpace()[pri:0, instance:PraktikumTest@66ad7bf0]" started-at="2022-07-28T19:39:22 EEST" name="shouldReturnFalseStringWithoutSpace" finished-at="2022-07-28T19:39:22 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnFalseStringWithoutSpace -->
+        <test-method signature="shouldReturnTrueForEighteenCharsInCorrectString()[pri:0, instance:PraktikumTest@66ad7bf0]" started-at="2022-07-28T19:39:22 EEST" name="shouldReturnTrueForEighteenCharsInCorrectString" finished-at="2022-07-28T19:39:22 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnTrueForEighteenCharsInCorrectString -->
+        <test-method signature="shouldReturnTrueForFourCharsInCorrectString()[pri:0, instance:PraktikumTest@66ad7bf0]" started-at="2022-07-28T19:39:22 EEST" name="shouldReturnTrueForFourCharsInCorrectString" finished-at="2022-07-28T19:39:22 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnTrueForFourCharsInCorrectString -->
+        <test-method signature="shouldReturnTrueForThreeCharsInCorrectString()[pri:0, instance:PraktikumTest@66ad7bf0]" started-at="2022-07-28T19:39:22 EEST" name="shouldReturnTrueForThreeCharsInCorrectString" finished-at="2022-07-28T19:39:22 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnTrueForThreeCharsInCorrectString -->
+        <test-method signature="shouldReturnTrueForNineteenCharsInCorrectString()[pri:0, instance:PraktikumTest@66ad7bf0]" started-at="2022-07-28T19:39:22 EEST" name="shouldReturnTrueForNineteenCharsInCorrectString" finished-at="2022-07-28T19:39:22 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnTrueForNineteenCharsInCorrectString -->
+      </class> <!-- PraktikumTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
