@@ -1,3 +1,4 @@
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -22,67 +23,67 @@ public class PraktikumTest {
          */
 
     @Test
-    //@DisplayName("Return TRUE for three chars in correct string")
+    @DisplayName("Return TRUE for three chars in correct string")
     public void shouldReturnTrueForThreeCharsInCorrectString() {
         checkString(threeCharsInCorrectString, true);
     }
 
     @Test
-    //@DisplayName("Return TRUE for nineteen chars in correct string")
+    @DisplayName("Return TRUE for nineteen chars in correct string")
     public void shouldReturnTrueForNineteenCharsInCorrectString() {
         checkString(nineteenCharsInCorrectString, true);
     }
 
     @Test
-    //@DisplayName("Return TRUE for four chars in correct string")
+    @DisplayName("Return TRUE for four chars in correct string")
     public void shouldReturnTrueForFourCharsInCorrectString() {
         checkString(fourCharsInCorrectString, true);
     }
 
     @Test
-    //@DisplayName("Return TRUE for eighteen chars in correct string")
+    @DisplayName("Return TRUE for eighteen chars in correct string")
     public void shouldReturnTrueForEighteenCharsInCorrectString() {
         checkString(eighteenCharsInCorrectString, true);
     }
 
     @Test
-    //@DisplayName("Return FALSE for string with two chars")
+    @DisplayName("Return FALSE for string with two chars")
     public void shouldReturnFalseForTwoCharsString() {
         checkString(twoCharInString, false);
     }
 
     @Test
-    //@DisplayName("Return FALSE for string with twenty chars")
+    @DisplayName("Return FALSE for string with twenty chars")
     public void shouldReturnFalseForTwentyCharsInString() {
         checkString(twentyCharsInString, false);
     }
 
     @Test
-    //@DisplayName("Return FALSE for string without space")
+    @DisplayName("Return FALSE for string without space")
     public void shouldReturnFalseStringWithoutSpace() {
         checkString(stringWithoutSpace, false);
     }
 
     @Test
-    //@DisplayName("Return FALSE for string with two spaces")
+    @DisplayName("Return FALSE for string with two spaces")
     public void shouldReturnFalseStringWithTwoSpaceInTheMiddle() {
         checkString(stringWithTwoSpaceInTheMiddle, false);
     }
 
     @Test
-    //@DisplayName("Return FALSE for string with space at the beginning")
+    @DisplayName("Return FALSE for string with space at the beginning")
     public void shouldReturnFalseStringWithSpaceAtTheBeginning() {
         checkString(stringWithSpaceAtTheBeginning, false);
     }
 
     @Test
-    //@DisplayName("Return FALSE for string with space at the end")
+    @DisplayName("Return FALSE for string with space at the end")
     public void shouldReturnFalseStringWithSpaceAtTheEnd() {
         checkString(stringWithSpaceAtTheEnd, false);
     }
 
     @Test
-    //@DisplayName("Return FALSE for empty string")
+    @DisplayName("Return FALSE for empty string")
     public void shouldReturnFalseForEmptyString() {
         checkString(emptyString, false);
     }
