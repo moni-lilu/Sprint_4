@@ -1,3 +1,5 @@
+import java.nio.charset.StandardCharsets;
+
 public class Account {
 
     private final String name;
@@ -6,12 +8,12 @@ public class Account {
         this.name = name;
     }
 
-    public boolean checkNameToEmboss() {
+ //   public boolean checkNameToEmboss() {
         /*
              Этот метод должен проверять, что сохранённая через конструктор строка соответствует требованиям.
              Если строка удовлетворяет условиям, метод возвращает true, иначе — false.
          */
-        if (name.equals("")) {
+/*        if (name.equals("")) {
             return false;
         } else {
             String firstSymbol = String.valueOf(name.charAt(0));
@@ -35,6 +37,22 @@ public class Account {
                 return true;
             }
         }
+    }
+*/
+    public boolean checkNameToEmboss() {
+        boolean isValidStringLength;
+        boolean isValidSpaceLocation;
+        boolean isSpaseOne;
+
+        if (name == null) {
+            return false;
+        }
+
+        isValidStringLength = name.length()>=3 && name.length()<= 19;
+        isSpaseOne = name.indexOf(' ') == name.lastIndexOf(' ');
+        isValidSpaceLocation = name.indexOf(' ') > 0 && name.indexOf(' ') < name.length() - 1;
+
+        return isValidStringLength && isValidSpaceLocation && isSpaseOne;
     }
 
 }

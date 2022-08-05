@@ -1,97 +1,41 @@
-import io.qameta.allure.junit4.DisplayName;
-import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
+import static org.junit.Assert.assertEquals;
+
+@RunWith(Parameterized.class)
 public class PraktikumTest {
+    private final String stringToTest;
+    private final boolean expected;
 
-    String twoCharInString = "AН";
-    String threeCharsInCorrectString = "A Н";
-    String fourCharsInCorrectString = "Aр Н";
-    String eighteenCharsInCorrectString = "Агата Новосельцева";
-    String nineteenCharsInCorrectString = "Амалия Новосельцева";
-    String twentyCharsInString = "Наталия Новосельцева";
-    String stringWithoutSpace = "АгатаНовосельцева";
-    String stringWithTwoSpaceInTheMiddle = "Агата  Новосельцева";
-    String stringWithSpaceAtTheBeginning = " АгатНовосельцева";
-    String stringWithSpaceAtTheEnd = "АгатаНовосельцева ";
-    String emptyString = "";
+    public PraktikumTest(String stringToTest, boolean expected) {
+        this.stringToTest = stringToTest;
+        this.expected = expected;
+    }
 
-        /*
-             В этом методе заложи логику работы с классом Account.
-             Нужно создать экземпляр класса Account: в качестве аргумента передать тестируемое имя
-             и вызвать метод, который проверяет, можно ли использовать фамилию и имя для печати на банковской карте.
-         */
-
-    @Test
-    @DisplayName("Return TRUE for three chars in correct string")
-    public void shouldReturnTrueForThreeCharsInCorrectString() {
-        checkString(threeCharsInCorrectString, true);
+    @Parameterized.Parameters(name = "Тестовые данные: {0} {1}")
+    public static Object[][] isStringCorrect() {
+        return new Object[][] {
+                {"A Н", true},
+                {"Aр Н", true},
+                {"Агата Новосельцева", true},
+                {"Амалия Новосельцева", true},
+                {"AН", false},
+                {"Наталия Новосельцева", false},
+                {"АгатаНовосельцева", false},
+                {"Агата  Новосельцева", false},
+                {" АгатНовосельцева", false},
+                {"АгатаНовосельцева ", false},
+                {"", false},
+                {null, false}
+        };
     }
 
     @Test
-    @DisplayName("Return TRUE for nineteen chars in correct string")
-    public void shouldReturnTrueForNineteenCharsInCorrectString() {
-        checkString(nineteenCharsInCorrectString, true);
-    }
-
-    @Test
-    @DisplayName("Return TRUE for four chars in correct string")
-    public void shouldReturnTrueForFourCharsInCorrectString() {
-        checkString(fourCharsInCorrectString, true);
-    }
-
-    @Test
-    @DisplayName("Return TRUE for eighteen chars in correct string")
-    public void shouldReturnTrueForEighteenCharsInCorrectString() {
-        checkString(eighteenCharsInCorrectString, true);
-    }
-
-    @Test
-    @DisplayName("Return FALSE for string with two chars")
-    public void shouldReturnFalseForTwoCharsString() {
-        checkString(twoCharInString, false);
-    }
-
-    @Test
-    @DisplayName("Return FALSE for string with twenty chars")
-    public void shouldReturnFalseForTwentyCharsInString() {
-        checkString(twentyCharsInString, false);
-    }
-
-    @Test
-    @DisplayName("Return FALSE for string without space")
-    public void shouldReturnFalseStringWithoutSpace() {
-        checkString(stringWithoutSpace, false);
-    }
-
-    @Test
-    @DisplayName("Return FALSE for string with two spaces")
-    public void shouldReturnFalseStringWithTwoSpaceInTheMiddle() {
-        checkString(stringWithTwoSpaceInTheMiddle, false);
-    }
-
-    @Test
-    @DisplayName("Return FALSE for string with space at the beginning")
-    public void shouldReturnFalseStringWithSpaceAtTheBeginning() {
-        checkString(stringWithSpaceAtTheBeginning, false);
-    }
-
-    @Test
-    @DisplayName("Return FALSE for string with space at the end")
-    public void shouldReturnFalseStringWithSpaceAtTheEnd() {
-        checkString(stringWithSpaceAtTheEnd, false);
-    }
-
-    @Test
-    @DisplayName("Return FALSE for empty string")
-    public void shouldReturnFalseForEmptyString() {
-        checkString(emptyString, false);
-    }
-
-    public void checkString(String checkingString, boolean expectedResult) {
-        Account string = new Account(checkingString);
+    public void shouldBeCorrectString() {
+        Account string = new Account(stringToTest);
         boolean actual = string.checkNameToEmboss();
-        Assert.assertEquals(actual, expectedResult);
+        assertEquals(expected, actual);
     }
-
 }
